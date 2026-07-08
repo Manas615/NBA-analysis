@@ -6,3 +6,17 @@ __pycache__/
 models/
 .cache/
 .ipynb_checkpoints/
+data/
+*.egg-info/
+dist/
+build/
+node_modules/
+frontend/dist/
+frontend/node_modules/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+*.log
+*.pid
+docker-volumes/

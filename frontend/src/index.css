@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#0B0F19] text-gray-100 font-sans antialiased;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    @apply w-2 h-2;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-[#0B0F19];
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-700 rounded-full hover:bg-gray-600 transition-colors;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-card/60 backdrop-blur-md border border-gray-800 rounded-2xl shadow-xl;
+  }
+  
+  .glass-panel-hover {
+    @apply transition-all duration-300 hover:border-gray-700 hover:shadow-2xl hover:bg-card/80 hover:-translate-y-1;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl font-semibold shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 hover:-translate-y-0.5 transition-all duration-200 active:translate-y-0;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-gray-800 text-gray-200 border border-gray-700 rounded-xl font-semibold hover:bg-gray-700 hover:text-white transition-all duration-200;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 bg-gray-900/50 border border-gray-700 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200 text-gray-100 placeholder-gray-500;
+  }
+}
+
+/* Subtle background pattern */
+.bg-grid-pattern {
+  background-image: linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
